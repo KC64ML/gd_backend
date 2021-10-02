@@ -1,1 +1,1 @@
-web: gunicorn 프로젝트명.wsgi --log-file -
+web: gunicorn gdproject.wsgi --log-file -
