@@ -11,7 +11,7 @@ class Communicatewithpeople(models.Model):
     user_pk_userid = models.OneToOneField(
         'User', models.DO_NOTHING, db_column='User_pk_userid', primary_key=True)
 
-    # class Meta:
+    #class Meta:
     #     managed = False
     #     db_table = 'communicatewithpeople'
 
