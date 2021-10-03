@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.sites',
     'gdapp',
+    'social_django',
     'rest_framework',
     'rest_framework.authtoken',
     'rest_auth',
