@@ -11,9 +11,9 @@ class Communicatewithpeople(models.Model):
     user_pk_userid = models.OneToOneField(
         'User', models.DO_NOTHING, db_column='User_pk_userid', primary_key=True)
 
-    class Meta:
-        managed = False
-        db_table = "communicatewithpeople"
+    # class Meta:
+    #     managed = False
+    #     db_table = 'communicatewithpeople'
 
 
 class Diary(models.Model):
@@ -24,9 +24,9 @@ class Diary(models.Model):
     user_pk_userid = models.OneToOneField(
         'User', models.DO_NOTHING, db_column='User_pk_userid', primary_key=True)
 
-    class Meta:
-        managed = False
-        db_table = "diary"
+    # class Meta:
+    #     managed = False
+    #     db_table = 'diary'
 
 
 class Drugnotification(models.Model):
@@ -37,9 +37,9 @@ class Drugnotification(models.Model):
     user_pk_userid = models.OneToOneField(
         'User', models.DO_NOTHING, db_column='User_pk_userid', primary_key=True)
 
-    class Meta:
-        managed = False
-        db_table = "drugnotification"
+    # class Meta:
+    #     managed = False
+    #     db_table = 'drugnotification'
 
 
 class Game(models.Model):
@@ -48,9 +48,9 @@ class Game(models.Model):
     user_pk_userid = models.OneToOneField(
         'User', models.DO_NOTHING, db_column='User_pk_userid', primary_key=True)
 
-    class Meta:
-        managed = False
-        db_table = "game"
+    # class Meta:
+    #     managed = False
+    #     db_table = 'game'
 
 
 class Location(models.Model):
@@ -61,9 +61,9 @@ class Location(models.Model):
     user_pk_userid = models.OneToOneField(
         'User', models.DO_NOTHING, db_column='User_pk_userid', primary_key=True)
 
-    class Meta:
-        managed = False
-        db_table = "location"
+    # class Meta:
+    #     managed = False
+    #     db_table = 'location'
 
 
 class UserManager(BaseUserManager):
