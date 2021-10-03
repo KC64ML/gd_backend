@@ -13,7 +13,7 @@ class Communicatewithpeople(models.Model):
 
     class Meta:
         managed = False
-        db_table = 'communicatewithpeople'
+        db_table = "communicatewithpeople"
 
 
 class Diary(models.Model):
@@ -26,7 +26,7 @@ class Diary(models.Model):
 
     class Meta:
         managed = False
-        db_table = 'diary'
+        db_table = "diary"
 
 
 class Drugnotification(models.Model):
@@ -39,7 +39,7 @@ class Drugnotification(models.Model):
 
     class Meta:
         managed = False
-        db_table = 'drugnotification'
+        db_table = "drugnotification"
 
 
 class Game(models.Model):
@@ -50,7 +50,7 @@ class Game(models.Model):
 
     class Meta:
         managed = False
-        db_table = 'game'
+        db_table = "game"
 
 
 class Location(models.Model):
@@ -63,7 +63,7 @@ class Location(models.Model):
 
     class Meta:
         managed = False
-        db_table = 'location'
+        db_table = "location"
 
 
 class UserManager(BaseUserManager):
