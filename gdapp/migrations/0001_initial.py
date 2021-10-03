@@ -44,7 +44,7 @@ class Migration(migrations.Migration):
             ],
         ),
         migrations.CreateModel(
-            name='Communicatewithpeople',
+            name='communicatewithpeople',
             fields=[
                 ('chattinghistory', models.CharField(
                     blank=True, max_length=45, null=True)),
@@ -57,7 +57,7 @@ class Migration(migrations.Migration):
             },
         ),
         migrations.CreateModel(
-            name='Diary',
+            name='diary',
             fields=[
                 ('password', models.CharField(max_length=20)),
                 ('date', models.CharField(max_length=10)),
@@ -71,7 +71,7 @@ class Migration(migrations.Migration):
             },
         ),
         migrations.CreateModel(
-            name='Drugnotification',
+            name='drugnotification',
             fields=[
                 ('approximately_time_remaining', models.CharField(
                     blank=True, max_length=20, null=True)),
@@ -85,7 +85,7 @@ class Migration(migrations.Migration):
             },
         ),
         migrations.CreateModel(
-            name='Game',
+            name='game',
             fields=[
                 ('gamerecord', models.CharField(
                     blank=True, max_length=45, null=True)),
@@ -98,7 +98,7 @@ class Migration(migrations.Migration):
             },
         ),
         migrations.CreateModel(
-            name='Location',
+            name='location',
             fields=[
                 ('rarea', models.CharField(max_length=20)),
                 ('locationcol', models.CharField(
