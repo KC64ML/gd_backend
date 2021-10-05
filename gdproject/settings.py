@@ -179,4 +179,4 @@ SITE_ID = 1
 AUTH_USER_MODEL = 'gdapp.User'
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')``
+STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
