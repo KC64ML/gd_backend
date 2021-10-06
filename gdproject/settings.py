@@ -11,14 +11,14 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
-from django.contrib.auth import get_user_model
+# from django.contrib.auth import get_user_model  # 추가
 import datetime, os
 import dj_database_url
-import django
+# import django  # 추가
 
-django.setup()
+# django.setup()  # 추가
 
-User = get_user_model()
+# User = get_user_model()   # 추가
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
