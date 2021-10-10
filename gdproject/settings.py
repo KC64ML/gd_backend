@@ -59,6 +59,14 @@ INSTALLED_APPS = [
     'allauth.socialaccount.providers.google',
 ]
 
+# Auth Applications
+INSTALLED_APPS += [
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    'allauth.socialaccount.providers.google',
+]
+
 MIDDLEWARE = [
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.security.SecurityMiddleware',
@@ -185,17 +193,9 @@ AUTH_USER_MODEL = 'gdapp.User'
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
 
-
 AUTHENTICATION_BACKENDS = (
-    # Needed to login by username in Django admin, regardless of `allauth`
     'django.contrib.auth.backends.ModelBackend',
-
-    # `allauth` specific authentication methods, such as login by e-mail
-    'allauth.account.auth_backends.AuthenticationBackend',
+    'allauth.account.auth_backends.AuthenticationBackend'
 )
 
 LOGIN_REDIRECT_URL = '/'
-
-
-# 로그인 5 회 이상 틀리면 방지문자 나오게
-# 아이디에 이메일 형식 입력하게 만들기

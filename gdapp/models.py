@@ -97,15 +97,15 @@ class UserManager(BaseUserManager):
 
 class User(AbstractBaseUser, PermissionsMixin):
     pk_userid = models.AutoField(primary_key=True)
-    username = models.CharField(unique=True, max_length=45,blank=True,null=True)
-    phonenumber = models.CharField(max_length=12,blank=True,null=True)
+    username = models.CharField(unique=True, max_length=45, blank=True, null=True)
+    phonenumber = models.CharField(max_length=12, blank=True, null=True)
     email = models.CharField(
         unique=True,
         max_length=64
     )
-    familyname = models.CharField(max_length=5,blank=True,null=True)
-    age = models.CharField(max_length=3,blank=True,null=True)
-    dateofonesbirth = models.CharField(max_length=6,blank=True,null=True)
+    familyname = models.CharField(max_length=5, blank=True, null=True)
+    age = models.CharField(max_length=3, blank=True, null=True)
+    dateofonesbirth = models.CharField(max_length=6, blank=True, null=True)
 
     # login을 위한 소스
     # is_staff, is_active
@@ -114,7 +114,9 @@ class User(AbstractBaseUser, PermissionsMixin):
         _('staff status'),
         default=False,
         help_text=_(
-            'Designates whether the user can log into this admin site.'),blank=True,null=True
+            'Designates whether the user can log into this admin site.'),
+            blank=True,
+            null=True
     )
     is_active = models.BooleanField(
         _('active'),
@@ -122,9 +124,11 @@ class User(AbstractBaseUser, PermissionsMixin):
         help_text=_(
             'Designates whether this user should be treated as active. '
             'Unselect this instead of deleting accounts.'
-        ),blank=True,null=True
+        ),
+        blank=True,
+        null=True
     )
-    date_joined = models.DateTimeField(_('date joined'), default=timezone.now,blank=True,null=True)
+    date_joined = models.DateTimeField(_('date joined'), default=timezone.now, blank=True, null=True)
 
     objects = UserManager()
 

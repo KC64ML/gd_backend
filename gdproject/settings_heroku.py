@@ -1,7 +1,8 @@
 # coding: utf-8
 from gdproject.settings import *
 
-DEBUG = True
+# for production server, do not use debug mode on production environment
+DEBUG = False
 
 DATABASES = {
     'default': {
