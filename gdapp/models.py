@@ -96,7 +96,7 @@ class UserManager(BaseUserManager):
 
 
 class User(AbstractBaseUser, PermissionsMixin):
-    pk_userid = models.AutoField(primary_key=True,blank=True,null=True)
+    pk_userid = models.AutoField(primary_key=True)
     username = models.CharField(unique=True, max_length=45,blank=True,null=True)
     phonenumber = models.CharField(max_length=12,blank=True,null=True)
     email = models.CharField(
