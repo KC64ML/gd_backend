@@ -2,7 +2,6 @@
 from gdproject.settings import *
 
 # for production server, do not use debug mode on production environment
-DISABLE_COLLECTSTATIC = False
 DEBUG = False
 
 DATABASES = {
