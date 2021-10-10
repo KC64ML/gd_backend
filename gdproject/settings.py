@@ -49,6 +49,14 @@ INSTALLED_APPS = [
     'rest_auth',
     'rest_auth.registration',
     'corsheaders',
+
+    # allauth
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+
+    # provider : 구글, 페이스북, 카카오톡, 깃헙 등 소셜 로그인 제공하는 업체를 provider
+    'allauth.socialaccount.providers.google',
 ]
 
 # Auth Applications
