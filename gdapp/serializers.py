@@ -42,10 +42,10 @@ Userset = get_user_model()
 
 class UserCreateSerializer(serializers.Serializer):
 
-    # class Meta:
-    #     model = User
-    #     fields = ['username', 'password', 'phonenumber',
-    #               'email', 'familyname', 'age', 'dateofonesbirth']
+    class Meta:
+        model = User
+        fields = ['username', 'password', 'phonenumber',
+                  'email', 'familyname', 'age', 'dateofonesbirth']
 
     username = serializers.CharField(required=True)
     password = serializers.CharField(required=True)
