@@ -5,6 +5,7 @@ from django.utils import timezone
 # Create your models here.
 
 
+# 채팅 방
 class Communicatewithpeople(models.Model):
     chattinghistory = models.CharField(max_length=45, blank=True, null=True)
     # Field name made lowercase.
@@ -16,6 +17,7 @@ class Communicatewithpeople(models.Model):
     #     db_table = 'communicatewithpeople'
 
 
+# 일기장
 class Diary(models.Model):
     password = models.CharField(max_length=20)
     date = models.CharField(max_length=10)
