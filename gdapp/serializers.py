@@ -91,7 +91,7 @@ class UserLoginSerializer(serializers.Serializer):
             }
         try:
             payload = JWT_PAYLOAD_HANDLER(user)
-            jwt_token = JWT_ENCODE_HANDLER(payload)  # 토큰 발행
+            jwt_token = JWT_ENCODE_HANDLER(payload).decode('utf-8')  # 토큰 발행
             update_last_login(None, user)
         except User.DoesNotExist:
             raise serializers.ValidationError(
