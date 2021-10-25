@@ -51,16 +51,16 @@ INSTALLED_APPS = [
     'corsheaders',
 ]
 
-# Auth Applications
-INSTALLED_APPS += [
-    'allauth',
-    'allauth.account',
-    'allauth.socialaccount',
+# # Auth Applications
+# INSTALLED_APPS += [
+#     'allauth',
+#     'allauth.account',
+#     'allauth.socialaccount',
 
-    # providers
-    'allauth.socialaccount.providers.google',
-    'allauth.socialaccount.providers.naver',
-]
+#     # providers
+#     'allauth.socialaccount.providers.google',
+#     'allauth.socialaccount.providers.naver',
+# ]
 
 MIDDLEWARE = [
     'whitenoise.middleware.WhiteNoiseMiddleware',
