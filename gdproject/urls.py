@@ -13,11 +13,12 @@ router.register(r'drugnotification', views.DrugnotificationViewSet)
 router.register(r'game', views.GameViewSet)
 router.register(r'location', views.LocationViewSet)
 router.register(r'user', views.UserViewSet)
-router.register(r'login',views.login)
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include(router.urls)),
+    path('login/', views.login),
     path('account/', include('allauth.urls')),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
+    path('', include(router.urls)),
 ]
