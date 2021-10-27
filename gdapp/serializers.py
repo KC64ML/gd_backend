@@ -5,6 +5,12 @@ from rest_framework_jwt.settings import api_settings
 from .models import Communicatewithpeople, Diary, Drugnotification, Game, Location, User
 # JWT 사용을 위한 설정
 
+Userset = get_user_model()
+
+JWT_PAYLOAD_HANDLER = api_settings.JWT_PAYLOAD_HANDLER
+JWT_ENCODE_HANDLER = api_settings.JWT_ENCODE_HANDLER
+
+
 
 class CommunicatewithpeopleSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
@@ -38,7 +44,7 @@ class LocationSerializer(serializers.HyperlinkedModelSerializer):
 
 
 
-Userset = get_user_model()
+
 
 class UserCreateSerializer(serializers.Serializer):
 
@@ -71,8 +77,6 @@ class UserCreateSerializer(serializers.Serializer):
         return user
 
 
-JWT_PAYLOAD_HANDLER = api_settings.JWT_PAYLOAD_HANDLER
-JWT_ENCODE_HANDLER = api_settings.JWT_ENCODE_HANDLER
 
 
 class UserLoginSerializer(serializers.Serializer):
@@ -92,12 +96,13 @@ class UserLoginSerializer(serializers.Serializer):
                 'email': 'None'
             }
         try:
+            print("try시도")
             payload = JWT_PAYLOAD_HANDLER(user)
-            jwt_token = JWT_ENCODE_HANDLER(payload)  # 토큰 발행
+            jwt_token = JWT_ENCODE_HANDLER(payload)
             print(jwt_token)
             print("type : ",type(jwt_token))
             update_last_login(None, user)
-        except User.DoesNotExist:
+        except Userset.DoesNotExist:
             raise serializers.ValidationError(
                 'User with given email and password does not exists'
             )
