@@ -201,6 +201,7 @@ JWT_AUTH = {
     'JWT_REFRESH_EXPIRATION_DELTA': datetime.timedelta(days=28),
 }
 
+REST_USE_JWT = True
 
 SITE_ID = 1
 AUTH_USER_MODEL = 'gdapp.User'
