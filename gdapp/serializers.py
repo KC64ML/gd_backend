@@ -99,6 +99,7 @@ class UserLoginSerializer(serializers.Serializer):
             print("try시도")
             payload = JWT_PAYLOAD_HANDLER(user)
             jwt_token = JWT_ENCODE_HANDLER(payload)
+            print("jwttoken 실행")
             print(jwt_token)
             print("type : ",type(jwt_token))
             update_last_login(None, user)
