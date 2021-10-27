@@ -97,11 +97,11 @@ class UserLoginSerializer(serializers.Serializer):
             }
         try:
             print("try시도")
-            payload = JWT_PAYLOAD_HANDLER(user)
-            jwt_token = JWT_ENCODE_HANDLER(payload)
-            print("jwttoken 실행")
-            print(jwt_token)
-            print("type : ",type(jwt_token))
+            # payload = JWT_PAYLOAD_HANDLER(user)
+            # jwt_token = JWT_ENCODE_HANDLER(payload)
+            # print("jwttoken 실행")
+            # print(jwt_token)
+            # print("type : ",type(jwt_token))
             update_last_login(None, user)
         except Userset.DoesNotExist:
             raise serializers.ValidationError(
@@ -109,5 +109,5 @@ class UserLoginSerializer(serializers.Serializer):
             )
         return {
             'email': user.email,
-            'token': jwt_token
+            # 'token': jwt_token
         }
