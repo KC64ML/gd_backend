@@ -168,6 +168,11 @@ REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
     ),
+        'DEFAULT_PARSER_CLASSES': [
+        'rest_framework.parsers.JSONParser',
+        'rest_framework.parsers.FormParser',
+        'rest_framework.parsers.MultiPartParser'
+    ]
 }
 
 
@@ -189,7 +194,7 @@ JWT_AUTH = {
     'JWT_RESPONSE_PAYLOAD_HANDLER':
         'rest_framework_jwt.utils.jwt_response_payload_handler',
         
-    'JWT_SECRET_KEY': SECRET_KEY,
+    'JWT_SECRET_KEY': 'SECRET_KEY',
     'JWT_ALGORITHM': 'HS256',  # 암호화 알고리즘
     'JWT_ALLOW_REFRESH': True,  # refresh 사용 여부
     'JWT_EXPIRATION_DELTA': datetime.timedelta(days=7),  # 유효기간 설정
