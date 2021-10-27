@@ -75,7 +75,7 @@ def login(request):
 
         response = {
             'success': True,
-            'token': serializer.data['token']  # 시리얼라이저에서 받은 토큰 전달
+            #'token': serializer.data['token']  # 시리얼라이저에서 받은 토큰 전달
         }
 
         return Response(response, status=status.HTTP_200_OK)
